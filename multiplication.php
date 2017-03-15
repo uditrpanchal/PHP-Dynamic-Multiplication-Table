@@ -35,30 +35,30 @@ $num_count = 12;
 <table>
     <?php
 
-        for($i=0; $i < $num_count+1; $i++)
+        for($row=0; $row < $num_count+1; $row++)
         {
             echo"<tr>";
-            for($j=0; $j<$num_count+1; $j++)
+            for($col=0; $col<$num_count+1; $col++)
             {
-                if($i==0 && $j==0)
+                if($row==0 && $col==0)
                 {
                     echo"<th> </th>";
                 }
 
-                if($i==0 && $j!=0)
+                if($row==0 && $col!=0)
                 {
-                    echo"<th> $j </th>";
+                    echo"<th> $col </th>";
                 }
 
-                if($j==0 && $i!=0)
+                if($col==0 && $row!=0)
                 {
-                   echo"<th> $i </th>";
+                   echo"<th> $row </th>";
                 }
 
-                if($i!=0 && $j!=0)
+                if($row!=0 && $col!=0)
                 {
-                    $ij = $i*$j;
-                    echo"<td> {$ij} </td>";
+                    $row_col = $row*$col;
+                    echo"<td> {$row_col} </td>";
                 }
             }
             echo"</tr>";
